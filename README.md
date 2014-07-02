@@ -6,4 +6,4 @@ Coding for Entrepreneurs Tutorial for building an eCommerce web application with
 
 Each Lecture Name is linked to the related source code.
 
-[Product App Views & Templates](../../tree/03fd0342c654db2fb4b8b53ac2a7cda68c72ee66)
+[Product App Views & Templates](../../tree/6e71fc06e0dfc3acac80269a0e1c2ba3e537ef15)

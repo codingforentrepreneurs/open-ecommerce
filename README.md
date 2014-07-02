@@ -9,5 +9,5 @@ Each Lecture Name is linked to the related source code.
 ## Lecture Code
 [Product App Views & Templates](../../tree/6e71fc06e0dfc3acac80269a0e1c2ba3e537ef15)
 
-[Context in Templates](../../tree/cf78a301991405a858dd320693dbcdd391f154d0)
+[Context in Templates](../../tree/28a1325278f24b491938878b5001f820f31a51eb)
 

@@ -24,5 +24,5 @@ Each Lecture Name is linked to the related source code.
 
 [Customize Admin](../../tree/7a8e74f216a6850f057b5702fc10052136da8c0e)
 
-
+[Querysets & South](../../tree/f6f8bec6ec0634b011803171f3f84f6f66c31fb4)
  

@@ -20,5 +20,8 @@ Each Lecture Name is linked to the related source code.
 
 [First Model](../../tree/12a1f2f20830dedb1557fca15d8de6b744fb3d79)
 
+[The Python Shell](../../tree/12a1f2f20830dedb1557fca15d8de6b744fb3d79)
+
+
 
  

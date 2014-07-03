@@ -12,3 +12,5 @@ Each Lecture Name is linked to the related source code.
 [Context in Templates](../../tree/28a1325278f24b491938878b5001f820f31a51eb)
 
 [Add Bootstrap](../../tree/15d8d3ae7f0c63887f0247a1a69b8cbd25fd794d)
+
+[Using Blocks](../../tree/a34d82fbd6510578ee7f63df9cbda4e4ff575d7e)

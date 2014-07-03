@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Product
+from .models import Product, ProductImage
 
 class ProductAdmin(admin.ModelAdmin):
 	date_hierarchy = 'timestamp' #updated
@@ -16,3 +16,6 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Product, ProductAdmin)
+
+
+admin.site.register(ProductImage)

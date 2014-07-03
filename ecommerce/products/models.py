@@ -7,7 +7,6 @@ class Product(models.Model):
 	price = models.DecimalField(decimal_places=2, max_digits=100, default=29.99)
 	sale_price = models.DecimalField(decimal_places=2, max_digits=100,\
 												null=True, blank=True)
-	#image = models.FileField(upload_to='products/images/', null=True)
 	slug = models.SlugField()
 	timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
 	updated = models.DateTimeField(auto_now_add=False, auto_now=True)
@@ -19,20 +18,14 @@ class Product(models.Model):
 	def get_price(self):
 		return self.price
 
-### FOR IMAGE FIELD ## INSTALL PILLOW
 
-#ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future pip install pillow
+class ProductImage(models.Model):
+	product = models.ForeignKey(Product)
+	image = models.ImageField(upload_to='products/images/')
+	featured = models.BooleanField(default=False)
+	thumbnail = models.BooleanField(default=False)
+	active = models.BooleanField(default=True)
+	updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
-#export CFLAGS=-Qunused-arguments
-#export CPPFLAGS=-Qunused-arguments
-#pip install pillow
-
-#use homebrew: #install with: 
-#ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-
-#in terminal:
-#brew tap Homebrew/python
-#brew install pillow
-
-
-
+	def __unicode__(self):
+		return self.product.title

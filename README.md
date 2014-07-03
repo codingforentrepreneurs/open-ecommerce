@@ -26,4 +26,6 @@ Each Lecture Name is linked to the related source code.
 
 [Querysets & South](../../tree/80eb9b523457d4e930d0f8848a95f4120612f34f)
 
+[Add Images](../../tree/851db5b47f17504f3fccc37cd0b4a5f2f4fb6ec7)
+
  

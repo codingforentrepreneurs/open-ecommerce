@@ -22,7 +22,7 @@ Each Lecture Name is linked to the related source code.
 
 [The Python Shell](../../tree/7938b3fa021ccd866ccfd14d235a2acbf3389d03)
 
-[Customize Admin](../../tree/f50112829800da43e780ff3d66c983fcc98f4082)
+[Customize Admin](../../tree/7a8e74f216a6850f057b5702fc10052136da8c0e)
 
 
  

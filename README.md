@@ -1,7 +1,7 @@
 eCommerce Project
 =========
 
-Coding for Entrepreneurs Tutorial for building an eCommerce web application with Django ([djangoproject.com](http://djangoproject.com)) &amp; Bootstrap ([getbootstrap.com](http:getbootstrap.com)). Topics include Python, HTML, CSS, JQuery, AJAX.
+Coding for Entrepreneurs Tutorial for building an eCommerce web application with Django ([djangoproject.com](http://djangoproject.com)) &amp; Bootstrap ([getbootstrap.com](http:getbootstrap.com)). Topics include Python, HTML, CSS, JQuery, AJAX, and more.
 
 Learn step-by-step to launch an eCommerce web app using [Django](http://djangoproject.com) for backend, [Bootstrap](http:getbootstrap.com) for front-end, [Heroku](http://heroku.com) for hosting, and [Stripe](http://stripe.com) for payment proccessing.
 
@@ -20,7 +20,7 @@ Each Lecture Name is linked to the related source code.
 
 [First Model](../../tree/12a1f2f20830dedb1557fca15d8de6b744fb3d79)
 
-[The Python Shell](../../tree/8ad04e766936459e09c14d6fd8e92722ff82179f)
+[The Python Shell](../../tree/7938b3fa021ccd866ccfd14d235a2acbf3389d03)
 
 
 

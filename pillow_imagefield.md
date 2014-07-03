@@ -1,0 +1,103 @@
+# Django ImageField & Pillow
+A basic reference guide to installing pillow on your local machine.
+
+## Create Virtual environment 
+
+```
+$ virtualenv venv && cd venv
+```
+
+####Activate it
+On Mac/Linux:
+```
+$ source bin/active # if mac
+```
+On Windows:
+```
+> .\Scripts\activate
+```
+
+## Install Python Image Library (Pillow)
+This provides image validation (as well as many other image-related python activities) for Django's [ImageField()](https://docs.djangoproject.com/en/dev/ref/models/fields/#imagefield)
+```
+$ pip install pillow
+```
+
+## If installation fails...
+You might see something like:
+
+```
+error: command 'cc' failed with exit status 1
+
+----------------------------------------
+Cleaning up...
+
+Command /Users/user/Desktop/venv/bin/python -c "import setuptools, tokenize;__file__='/Users/jmitch/Desktop/venv/build/pillow/setup.py';exec(compile(getattr(tokenize, 'open', open)(__file__).read().replace('\r\n', '\n'), __file__, 'exec'))" install --record /var/folders/pt/3tv_v7lx18xft_fwzsl2l4880000gn/T/pip-F89xZT-record/install-record.txt --single-version-externally-managed --compile --install-headers /Users/user/Desktop/venv/include/site/python2.7 failed with error code 1 in /Users/user/Desktop/venv/build/pillow
+Storing debug log for failure in /Users/user/.pip/pip.log
+```
+That means pillow was not installed correctly. Below are a few suggestions for toubleshooting (aka fixing) this issue.
+
+### Mac Users Troubleshooting guide
+
+##### [Download & Install Xcode](https://developer.apple.com/xcode/downloads/)
+
+##### [Create developer account](https://developer.apple.com/register/index.action) _Free at time of writing_
+
+**Download Command Line Tools for Xcode**. Search "command line tools" **[here](https://developer.apple.com/downloads/index.action)**. 
+Download the latest for your operating system (Mavericks or Yosemite)
+
+After XCode and command line tools are installed, open terminal and run:
+```
+$ pip install pillow
+```
+
+_If installation still fails, continue to next section._
+
+### Try HomeBrew
+
+Check Homebrew is installed
+```
+$which brew
+/usr/local/bin/brew #should be returned
+```
+
+If Homebrew is not installed, visit [http://brew.sh](http://brew.sh/) to install.
+
+
+__In Terminal__
+```
+$ brew update
+$ brew tap Homebrew/python
+$ brew install pillow
+```
+
+
+
+_If homebrew installation fails, try:_
+
+```
+$ export CFLAGS=-Qunused-arguments
+$ export CPPFLAGS=-Qunused-arguments
+$ pip install pillow
+```
+
+_Lastly try:_
+```
+$ ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future pip install pillow
+```
+
+## If all else fails
+Use FileField() instead of ImageField() as your model field. Example:
+```python
+image = models.FileField(upload_to='images/')
+```
+
+Instead of 
+```python
+image = models.ImageField(upload_to='images/')
+```
+
+The only disadvange to "FileField" is that it doesn't check the validatity of an image. Read the Djagno [documentation](https://docs.djangoproject.com/en/dev/ref/models/fields/#imagefield) for more details.
+
+
+#### Orgainzed by CodingForEntrepreneurs

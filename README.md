@@ -28,7 +28,7 @@ Each Lecture Name is linked to the related source code.
 
 [Add Images](../../tree/791f7e007834ac1cd829dbbf5616cdc4fc06f0bb)
 
-[Static Files](../../tree/39af1997726bfc6534a026b84714110d9dab3b37)
+[Static Files](../../tree/99850cb3163e67f8eaa2976496eed81f81d47332)
 
  
 ## Installation Guides

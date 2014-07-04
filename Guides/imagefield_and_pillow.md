@@ -15,7 +15,7 @@ $ virtualenv venv && cd venv
 ####Activate the virtual environment.
 On Mac/Linux:
 ```
-$ source bin/active # if mac
+$ source bin/activate
 ```
 On Windows:
 ```
@@ -103,5 +103,7 @@ image = models.ImageField(upload_to='images/')
 ```
 
 The only disadvantage to "FileField" is that it doesn't check the validity of an image. Read the Djagno [documentation](https://docs.djangoproject.com/en/dev/ref/models/fields/#imagefield) for more details.
+
+Cheers!
 
 #### Organized by CodingForEntrepreneurs

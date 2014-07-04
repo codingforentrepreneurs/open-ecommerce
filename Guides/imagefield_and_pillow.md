@@ -104,4 +104,4 @@ image = models.ImageField(upload_to='images/')
 
 The only disadvantage to "FileField" is that it doesn't check the validity of an image. Read the Djagno [documentation](https://docs.djangoproject.com/en/dev/ref/models/fields/#imagefield) for more details.
 
-#### Orgainzed by CodingForEntrepreneurs
+#### Organized by CodingForEntrepreneurs

@@ -28,6 +28,8 @@ Each Lecture Name is linked to the related source code.
 
 [Add Images](../../tree/791f7e007834ac1cd829dbbf5616cdc4fc06f0bb)
 
+[Static Files](../../tree/39af1997726bfc6534a026b84714110d9dab3b37)
+
  
 ## Installation Guides
 [Install Pillow for Django ImageField](Guides/imagefield_and_pillow.md)

@@ -30,8 +30,13 @@ Each Lecture Name is linked to the related source code.
 
 [Static Files](../../tree/99850cb3163e67f8eaa2976496eed81f81d47332)
 
+[Products on Homepage](../../tree/0c84a32d780e6e6e0b3b2f64f0b1f98689892a61)
+
+
+
  
 ## Installation Guides
 [Install Pillow for Django ImageField](Guides/imagefield_and_pillow.md)
+
 
 [Reactivate Ecommerce Virtualenv](Guides/reactivate_virtualenv.md)

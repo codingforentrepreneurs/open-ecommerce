@@ -11,11 +11,15 @@
 
     <title>{% block head_title %}{% endblock %}CFE STORE</title>
 
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    {% load staticfiles %}
+    <link rel='stylesheet' href='{% static "css/bootstrap.min.css" %}' />
+    <link rel='stylesheet' href='{% static "css/bootstrap-theme.min.css" %}' />
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<!-- Latest compiled and minified CSS 
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">--> 
+
+	<!-- Optional theme 
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
 
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/navbar-static-top/navbar-static-top.css" rel="stylesheet">

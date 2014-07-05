@@ -32,7 +32,7 @@ Each Lecture Name is linked to the related source code.
 
 [Products on the Homepage](../../tree/7a38da72b828fadebf29e70c3c2f42b5f43a3af3)
 
-[Unique Slugs for Products](../../tree/634856a89bdd511fbc0797684b12b1b5ed708816)
+[Unique Slugs for Products](../../tree/ef18c479654772105236aa2e2b3f2ff0d5fe9a47)
 
  
 ## Installation Guides

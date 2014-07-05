@@ -18,3 +18,11 @@ def all(request):
 	return render(request, template, context)
 
 
+def single(request, slug):
+	try:
+		product = Product.objects.get(slug=slug)
+		context = {'product': product}
+		template = 'products/single.html'	
+		return render(request, template, context)
+	except:
+		raise Http404

@@ -102,7 +102,7 @@ Instead of
 image = models.ImageField(upload_to='images/')
 ```
 
-The only disadvantage to "FileField" is that it doesn't check the validity of an image. Read the Djagno [documentation](https://docs.djangoproject.com/en/dev/ref/models/fields/#imagefield) for more details.
+The main advantage of "ImageField" is that checks if the file uploaded is an image while "FileField" does not. Read about "ImageField" in the Django [documentation here](https://docs.djangoproject.com/en/dev/ref/models/fields/#imagefield).
 
 Cheers!
 

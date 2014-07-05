@@ -36,6 +36,7 @@ Each Lecture Name is linked to the related source code.
 
 [URL Patterns for Slugs](../../tree/700574cdec346e1d30860caecff661a691672ffd)
 
+[Get Absolute URL](../../tree/2d67c6e6bdd3c1dbfe44431dcdadccf3472991ca)
  
 ## Installation Guides
 [Install Pillow for Django ImageField](Guides/imagefield_and_pillow.md)

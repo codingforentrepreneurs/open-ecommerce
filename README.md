@@ -34,7 +34,7 @@ Each Lecture Name is linked to the related source code.
 
 [Unique Slugs for Products](../../tree/ef18c479654772105236aa2e2b3f2ff0d5fe9a47)
 
-[URL Patterns for Slugs](../../tree/14d044088f8f5e0a67583486fe2ec9be448ac423)
+[URL Patterns for Slugs](../../tree/700574cdec346e1d30860caecff661a691672ffd)
 
  
 ## Installation Guides

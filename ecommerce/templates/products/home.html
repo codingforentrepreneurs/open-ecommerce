@@ -47,10 +47,10 @@ Welcome to
 		{% endif %}
 
 		{% endfor %}
-		{{ product.id }}
-		{{ product.title }}
+		
+		<a href='{{ product.get_absolute_url }}'>{{ product.title }}</a>
 		{{ product.price }}
-		{{ product.slug }}
+		
 
 
 		</div>

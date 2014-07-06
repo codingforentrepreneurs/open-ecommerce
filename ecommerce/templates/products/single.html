@@ -1,27 +1,43 @@
 {% extends 'base.html' %}
 
-
+<div class="page-header">
+  <h1>{{ product.title }}</h1>
+</div>
 
 {% block content %}
 
-<h1>{{ product.title }}</h1>
 
-{% for img in images %}
+<div class='row'>
+	<div class='col-sm-4'>
+	{% for img in images %}
 
-	{% if img.featured %}
-	<div class="col-xs-12 col-md-6">
-	<h1>Featured</h1>
-		<img class='img-responsive' src="{{ MEDIA_URL }}{{ img.image }}" />
+		{% if img.featured %}
+		<div class="col-xs-12">
+			<img class='img-responsive' src="{{ MEDIA_URL }}{{ img.image }}" />
+		<hr/>
+		</div>
+		{% endif %}
+			{% endfor %}
+	{% for img in images %}
+		{% if not img.featured %}
+		<div class="col-xs-6">
+	    <a href="#" class="thumbnail">
+	      <img class='img-responsive' src="{{ MEDIA_URL }}{{ img.image }}">
+	    </a>
+	  	</div>
+
+		{% endif %}
+								 
+	{% endfor %}
 	</div>
-	{% else %}
-	<div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img class='img-responsive' src="{{ MEDIA_URL }}{{ img.image }}">
-    </a>
-  	</div>
-
-	{% endif %}
-							 
-{% endfor %}
+	<div class='col-sm-8'>
+	 <h1>{{ product.title }} <a href='#' class='pull-right'>Add to Cart</a></h1>
+	 <hr/>
+	 Price: {{ product.price }} <br/>
+	 Shipping: Free with $25+ purchase.
+	 <hr/>
+	{{ product.description|linebreaks }}
+	</div>
+</div>
 
 {% endblock %}

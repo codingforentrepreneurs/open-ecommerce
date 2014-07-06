@@ -48,7 +48,7 @@ Each Lecture Name is linked to the related source code.
 
 [Update Cart](../../tree/580a2d1d7fb1318291e809eda02a846ef80c6811)
 
-[Django Sessions](../../tree/79becaa453f37574c85eea399cc8556bce7c9e3d)
+[Django Sessions](../../tree/ad2929272805a7ea26bc903d0051a61b57b4c78c)
 
 
 ## Installation Guides

@@ -4,6 +4,22 @@ from django.shortcuts import render, Http404
 
 from .models import Product, ProductImage
 
+
+def search(request):
+	try:
+		q = request.GET.get('q')
+	except:
+		q = None
+	
+	if q:
+		products = Product.objects.filter(title__icontains=q)
+		context = {'query': q, 'products': products}
+		template = 'products/results.html'	
+	else:
+		template = 'products/home.html'	
+		context = {}
+	return render(request, template, context)
+
 def home(request):
 	products = Product.objects.all()
 	template = 'products/home.html'	

@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     url(r'^s/$', 'products.views.search', name='search'),
     url(r'^products/$', 'products.views.all', name='products'),
     url(r'^products/(?P<slug>[\w-]+)/$', 'products.views.single', name='single_product'),
+    url(r'^cart/$', 'carts.views.view', name='cart'),
     # url(r'^blog/', include('blog.urls')),
     #(?P<all_items>.*)
     #(?P<id>\d+)

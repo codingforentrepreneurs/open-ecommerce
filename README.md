@@ -44,6 +44,7 @@ Each Lecture Name is linked to the related source code.
 
 [Product Page Part 1](../../tree/5ed294a1c33875e8e4d10d5d927f5617b4) 
 
+[Cart App](../../tree/545ee70309ed9d0cd68f597d67aa82a3af3bfb70)
 
 ## Installation Guides
 [Install Pillow for Django ImageField](Guides/imagefield_and_pillow.md)

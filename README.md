@@ -50,6 +50,7 @@ Each Lecture Name is linked to the related source code.
 
 [Django Sessions](../../tree/ad2929272805a7ea26bc903d0051a61b57b4c78c)
 
+[Cart Count in Navbar](../../tree/9c3145a6e5dfbb2d9954cfb99e77eb0ed6decc)
 
 ## Installation Guides
 [Install Pillow for Django ImageField](Guides/imagefield_and_pillow.md)

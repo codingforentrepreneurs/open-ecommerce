@@ -52,7 +52,7 @@ Each Lecture Name is linked to the related source code.
 
 [Cart Count in Navbar](../../tree/0871548d6b8693a34a63ee711e6591445dd597)
 
-[Cart Item](../../tree/f9a7a409334edc4dcf7c6f6a520cd5db2adaf9)
+[Cart Item](../../tree/2c0567fa1b6d100755e7709985a81a9e9da100)
 
 
 ## Installation Guides

@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">CFE eCommerce</a>
+          <a class="navbar-brand" href="{% url 'home' %}">CFE eCommerce</a>
         </div>
         <div class="navbar-collapse collapse">
 
@@ -19,9 +19,11 @@
           <button type="submit" class="btn btn-default">Submit</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li class="active"><a href="./">Static top</a></li>
-            <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+          <li><a href="{% url 'products' %}">Products</a></li>
+            <li><a href="{% url 'cart' %}">Cart <span class="badge">{% if not request.session.items_total %} 0 {% else %} {{ request.session.items_total }} {% endif%}</span></a></li>
+            {% if user.is_authenticated %}
+            <li><a href="#">Account</a></li>
+            {% endif %}
           </ul>
         </div><!--/.nav-collapse -->
       </div>

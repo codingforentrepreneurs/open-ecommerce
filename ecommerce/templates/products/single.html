@@ -31,19 +31,39 @@
 	{% endfor %}
 	</div>
 	<div class='col-sm-8'>
-	 <h1>{{ product.title }} 
+		<div class='col-sm-8 pull-left'>
+			 <h1>{{ product.title }} 
+			 <!-- <a href='{% url "update_cart" product.slug %}?qty=12' class='pull-right'>Add to Cart</a> -->
+			 </h1>
+		 </div>
+		 <div class='col-sm-4 pull-right'>
+			 	 <form class='form' method='GET' action='{% url "update_cart" product.slug %}'>
+			 	 <input class='btn btn-default btn-block' type='submit' value='Add to cart'/>
+			 	<input  class="form-control"  name='qty' type='number' value='1'/>
+			 	<select class='form-control' name='color'>
+			 		<option value='red'>Red</option>
+			 		<option value='green'>Green</option>
+			 		<option value='blue'>Blue</option>
+			 	</select>
+			 	<select class='form-control' name='size'>
+			 		<option value='sm'>Sm</option>
+			 		<option value='med'>Med</option>
+			 		<option value='lrg'>Large</option>
+			 	</select>
+			 	
 
-	 <a href='{% url "update_cart" product.slug %}?qty=12' class='pull-right'>Add to Cart</a></h1>
-	 	 <form class='form pull-right' method='GET' action='{% url "update_cart" product.slug %}'>
-	 	<input name='qty' type='number' value='1'/>
-	 	<input name='attr' type='text' placeholder='color' />
-	 	<input type='submit' value='Add to cart'/>
-	 </form>
-	 <hr/>
-	 Price: {{ product.price }} <br/>
-	 Shipping: Free with $25+ purchase.
-	 <hr/>
-	{{ product.description|linebreaks }}
+			 </form>
+	 	</div>
+	 	<div class='col-sm-12'>
+			 <hr/>
+
+			 Price: {{ product.price }} <br/>
+			 Shipping: Free with $25+ purchase.
+			 <hr/>
+	 	</div>
+			 <div class='col-sm-12'>
+			{{ product.description|linebreaks }}
+				</div>
 	</div>
 </div>
 

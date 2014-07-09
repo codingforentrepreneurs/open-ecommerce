@@ -58,7 +58,7 @@ Each Lecture Name is linked to the related source code.
 
 [Qty & Attr](../../tree/95481f2f1cfe29e1ee40fed88d1cab0c6daf51)
 
-[Cart Item Notes](../../tree/ed8e7a0701b772009f06b40d7505d35cf5ed8d)
+[Cart Item Notes](../../tree/d012f248e2128de2327767f3e0ffa9753506ec)
 
 
 ## Installation Guides

@@ -40,17 +40,29 @@
 			 	 <form class='form' method='GET' action='{% url "update_cart" product.slug %}'>
 			 	 <input class='btn btn-default btn-block' type='submit' value='Add to cart'/>
 			 	<input  class="form-control"  name='qty' type='number' value='1'/>
-			 	<select class='form-control' name='color'>
-			 		<option value='red'>Red</option>
-			 		<option value='green'>Green</option>
-			 		<option value='blue'>Blue</option>
-			 	</select>
-			 	<select class='form-control' name='size'>
-			 		<option value='sm'>Sm</option>
-			 		<option value='med'>Med</option>
-			 		<option value='lrg'>Large</option>
-			 	</select>
 			 	
+			 	{% if product.variation_set.all %}
+
+
+			 	{% if product.variation_set.sizes %}
+			 	<select class='form-control' name='size'>
+			 	{% for item in product.variation_set.sizes %}
+			 		<option value='{{ item.title|lower }}'>{{ item.title|capfirst }}</option>
+			 		{% endfor %}
+			 	</select>
+			 	{% endif %}
+
+			 	 {% if product.variation_set.colors %}
+			 	<select class='form-control' name='size'>
+			 	{% for item in product.variation_set.colors %}
+			 		<option value='{{ item.title|lower }}'>{{ item.title|capfirst }}</option>
+			 		{% endfor %}
+			 	</select>
+			 	{% endif %}
+
+
+
+			 	{% endif %}
 
 			 </form>
 	 	</div>

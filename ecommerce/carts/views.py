@@ -35,17 +35,15 @@ def update_cart(request, slug):
 	notes = {}
 	try:
 		color = request.GET.get("color")
-		
+		notes['color'] = color
 	except:
 		color = None
 
 	try:
 		size = request.GET.get("size")
+		notes['size'] = size
 	except:
 		size = None
-	notes['size'] = size
-	notes['color'] = color
-
 
 	try:
 		the_id = request.session['cart_id']

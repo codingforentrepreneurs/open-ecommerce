@@ -64,6 +64,7 @@ Each Lecture Name is linked to the related source code.
 
 [Product Variations pt 2](../../tree/cb56edd19823d0bba6adbedd8ff0c1b7c57c73)
 
+[Product Variations pt 3](../../tree/a78fa12220ffb4694aa53909f7978ebb81e3ee)
 
 ## Installation Guides
 [Install Pillow for Django ImageField](Guides/imagefield_and_pillow.md)

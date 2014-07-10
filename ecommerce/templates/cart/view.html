@@ -32,7 +32,7 @@
 <td>{{ item.product.price }}</td>
 <td>{{ item.quantity }}</td>
 <td></td>
-<td><a href='#'>Remove</a></tr>
+<td><a href='{% url "remove_from_cart" item.id %}'>Remove</a></tr>
 {% endfor %}
 
 </table>

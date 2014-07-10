@@ -33,11 +33,10 @@
 	<div class='col-sm-8'>
 		<div class='col-sm-8 pull-left'>
 			 <h1>{{ product.title }} 
-			 <!-- <a href='{% url "update_cart" product.slug %}?qty=12' class='pull-right'>Add to Cart</a> -->
 			 </h1>
 		 </div>
 		 <div class='col-sm-4 pull-right'>
-			 	 <form class='form' method='POST' action='{% url "update_cart" product.slug %}'> {% csrf_token %}
+			 	 <form class='form' method='POST' action='{% url "add_to_cart" product.slug %}'> {% csrf_token %}
 			 	 <input class='btn btn-default btn-block' type='submit' value='Add to cart'/>
 			 	<input  class="form-control"  name='qty' type='number' value='1'/>
 			 	

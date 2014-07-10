@@ -62,7 +62,7 @@ Each Lecture Name is linked to the related source code.
 
 [Product Variations](../../tree/f84c2cea4b96d8515895dcb16e44433c1d1e99)
 
-[Product Variations pt 2](../../tree/1e948ac4062a4932591cf89da6a6473f4b8496)
+[Product Variations pt 2](../../tree/cb56edd19823d0bba6adbedd8ff0c1b7c57c73)
 
 
 ## Installation Guides

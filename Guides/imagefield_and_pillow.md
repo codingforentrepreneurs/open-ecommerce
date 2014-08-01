@@ -91,6 +91,32 @@ _Lastly try:_
 $ ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future pip install pillow
 ```
 
+### Linux Users Troubleshooting guide
+
+Linux users if you get any error something like this 
+```
+error: command 'gcc' failed with exit status 1 
+```
+Install the following packages in terminal
+```
+$sudo apt-get update 
+$sudo apt-get install python-dev
+$sudo apt-get install libevent-dev
+```
+### Windows Users Troubleshooting guide
+if you get error some thing like this 
+```
+unable to find vcvarsall.bat
+```
+Check whether you have installed Microsoft Visual C++ 2008 or later
+
+Also you can install pillow using easy_install
+```
+C:\>easy_install pillow
+```
+
+
+
 ## Worst-Case Fallback: If all else Fails
 Use FileField() instead of ImageField() as your model field. Example:
 ```python

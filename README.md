@@ -70,8 +70,9 @@ Each Lecture Name is linked to the related source code.
 
 
 
-## Installation Guides
-[Install Pillow for Django ImageField](Guides/imagefield_and_pillow.md)
+## Installation & Troubleshooting Guides
+[View All](../../../Guides/)
 
+[Install Pillow for Django ImageField](https://github.com/codingforentrepreneurs/Guides/blob/master/imagefield_and_pillow.md)
 
-[Reactivate Ecommerce Virtualenv](Guides/reactivate_virtualenv.md)
+[Reactivate Ecommerce Virtualenv](https://github.com/codingforentrepreneurs/Guides/blob/master/reactivate_virtualenv.md)

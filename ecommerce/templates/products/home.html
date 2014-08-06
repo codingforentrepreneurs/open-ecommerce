@@ -51,7 +51,15 @@ Welcome to
 							{% for item in product.productimage_set.all %}
 
 							{% if item.featured %}
-							<img class='img-responsive' src="{{ MEDIA_URL }}{{ item.image }}" />
+							<div style="
+							width:200px;
+							height:200px;margin:0 auto;">
+
+								<a href='{{ product.get_absolute_url }}'>
+									<div class='background_img_thumb' style="height:200px;background-image: url('{{ MEDIA_URL }}{{ item.image }}');"></div>
+								</a>
+							</div>
+							<!-- <img class='img-responsive' src="{{ MEDIA_URL }}{{ item.image }}" /> -->
 							{% endif %}
 							 
 

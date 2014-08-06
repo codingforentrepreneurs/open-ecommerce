@@ -68,6 +68,7 @@ Each Lecture Name is linked to the related source code.
 
 [Remove From Cart](../../tree/e8a2c81a7d370a5c6e89889bd96dc4dbda31dd)
 
+[Update Search & Home](../../tree/145ffba13ec59762c9222156e9fcf6f17d)
 
 
 ## Installation & Troubleshooting Guides

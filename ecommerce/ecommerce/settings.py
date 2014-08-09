@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'south',
     'products',
     'carts',
+    'orders',
 )
 
 MIDDLEWARE_CLASSES = (

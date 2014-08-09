@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     url(r'^cart/(?P<slug>[\w-]+)/$', 'carts.views.add_to_cart', name='add_to_cart'),
     url(r'^cart/$', 'carts.views.view', name='cart'),
     url(r'^checkout/$', 'orders.views.checkout', name='checkout'),
+    url(r'^orders/$', 'orders.views.orders', name='user_orders'),
     # url(r'^blog/', include('blog.urls')),
     #(?P<all_items>.*)
     #(?P<id>\d+)

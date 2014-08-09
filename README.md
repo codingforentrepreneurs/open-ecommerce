@@ -70,6 +70,14 @@ Each Lecture Name is linked to the related source code.
 
 [Update Search & Home](../../tree/145ffba13ec59762c9222156e9fcf6f17d)
 
+[Orders App](../../tree/5b758fc7f2c51e9695d65815ddce51f306274f11)
+
+[Checkout Pt 1](../../tree/e9602e8e76d6eac1dd5c1b286f3615ced3d264b8)
+
+[All Products Page](../../tree/3febe9dff97578d442fd70cfb62c27427996b5cc)
+
+[Update Order Model](../../tree/31f9ebf2dcb7e8653c1a3bf058b1a89003522c9a)
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

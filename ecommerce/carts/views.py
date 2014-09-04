@@ -13,6 +13,9 @@ def view(request):
 		cart = Cart.objects.get(id=the_id)
 	except:
 		the_id = None
+
+
+		
 	if the_id:
 		new_total = 0.00
 		for item in cart.cartitem_set.all():

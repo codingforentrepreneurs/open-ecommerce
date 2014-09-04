@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'products',
     'carts',
     'orders',
+    'accounts',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -108,4 +109,8 @@ STATICFILES_DIRS = (
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
+
+
+STRIPE_SECRET_KEY = "sk_test_zhxt8fO2TOsOn3ZKgu0GO6di"
+STRIPE_PUBLISHABLE_KEY = "pk_test_9KDKmdl3ms9T6HYVjB8Ieg4U"
 

@@ -78,6 +78,8 @@ Each Lecture Name is linked to the related source code.
 
 [Update Order Model](../../tree/31f9ebf2dcb7e8653c1a3bf058b1a89003522c9a)
 
+[Login Required Checkout](../../tree/4d5dacbc43ea4867fb45a88d4c7b22c6c39ff42c)
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

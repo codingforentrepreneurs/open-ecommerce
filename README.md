@@ -80,6 +80,8 @@ Each Lecture Name is linked to the related source code.
 
 [Login Required Checkout](../../tree/4d5dacbc43ea4867fb45a88d4c7b22c6c39ff42c)
 
+[User Stripe Account](../../tree/b30b42131fb7d56c5d30b948ecec46ca82db56e)
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

@@ -1,4 +1,6 @@
+from django.conf import settings """accidently removed import"""
 from django.db import models
+
 
 # Create your models here.
 

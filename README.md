@@ -86,6 +86,7 @@ Each Lecture Name is linked to the related source code.
 
 [Form Validation](../../tree/cab6168fcbd9812c3d378175e4d8215757081337)
 
+[Registration Form](../../tree/51f5b88f6d10bf921e46c1311d178bcbab45f275)
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

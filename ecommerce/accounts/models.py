@@ -1,4 +1,4 @@
-from django.conf import settings """accidently removed import"""
+from django.conf import settings 
 from django.db import models
 
 

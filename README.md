@@ -82,6 +82,8 @@ Each Lecture Name is linked to the related source code.
 
 [User Stripe Account](../../tree/b30b42131fb7d56c5d30b948ecec46ca82db56e)
 
+[Logout View & Login View](../../tree/e896d74dc94a38b0b5b3bfad9abe3c698eddf04d)
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

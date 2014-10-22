@@ -2,6 +2,9 @@ import re
 
 from django.shortcuts import render, HttpResponseRedirect, Http404
 from django.contrib.auth import logout, login, authenticate
+from django.contrib import messages
+from django.core.urlresolvers import reverse
+
 
 from .forms import LoginForm, RegistrationForm
 from .models import EmailConfirmed
@@ -10,7 +13,8 @@ from .models import EmailConfirmed
 def logout_view(request):
 	print "logging out"
 	logout(request)
-	return HttpResponseRedirect('/')
+	messages.success(request, "Successfully Logged out. Feel free to login again.")
+	return HttpResponseRedirect('%s'%(reverse("auth_login")))
 
 def login_view(request):
 	form = LoginForm(request.POST or None)
@@ -20,7 +24,8 @@ def login_view(request):
 		password = form.cleaned_data['password']
 		user = authenticate(username=username, password=password)
 		login(request, user)
-
+		messages.success(request, "Successfully Logged In. Welcome Back!")
+		return HttpResponseRedirect("/")
 	context = {
 		"form": form,
 		"submit_btn": btn,
@@ -35,6 +40,8 @@ def registration_view(request):
 		new_user = form.save(commit=False)
 		# new_user.first_name = "Justin" this is where you can do stuff with the model form
 		new_user.save()
+		messages.success(request, "Successfully Registered. Please confirm your email now.")
+		return HttpResponseRedirect("/")
 		# username = form.cleaned_data['username']
 		# password = form.cleaned_data['password']
 		# user = authenticate(username=username, password=password)
@@ -56,14 +63,17 @@ def activation_view(request, activation_key):
 			instance = EmailConfirmed.objects.get(activation_key=activation_key)
 		except EmailConfirmed.DoesNotExist:
 			instance = None
-			raise Http404
+			messages.success(request, "There was an error with your request.")
+			return HttpResponseRedirect("/")
 		if instance is not None and not instance.confirmed:
 			page_message = "Confirmation Successful! Welcome."
 			instance.confirmed = True
 			instance.activation_key = "Confirmed"
 			instance.save()
+			messages.success(request, "Successfully Confirmed! Please login.")
 		elif instance is not None and instance.confirmed:
 			page_message = "Already Confirmed"
+			messages.success(request, "Already Confirmed.")
 		else:
 			page_message = ""
 

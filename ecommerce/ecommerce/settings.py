@@ -40,6 +40,8 @@ try:
 except:
     pass
 
+SITE_URL = "http://cfestore.com"
+ 
 
 # Application definition
 

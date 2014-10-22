@@ -88,6 +88,10 @@ Each Lecture Name is linked to the related source code.
 
 [Registration Form](../../tree/51f5b88f6d10bf921e46c1311d178bcbab45f275)
 
+[Unique Email & Post Save Signal](../../tree/2caa0ad81a5089cbd22af9a612f9fd0349eb80c1)
+
+
+
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)
 

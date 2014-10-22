@@ -92,6 +92,7 @@ Each Lecture Name is linked to the related source code.
 
 [Email Confirmed & Activation Method](../../tree/b5da41f513b3cfc72080023b41345f664d661833)
 
+[Setup Email Ability](../../tree/35855c4bc69e6e25092645037d64bb167250936f)
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

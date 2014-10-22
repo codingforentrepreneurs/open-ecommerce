@@ -1,3 +1,5 @@
+ecommerce/ecommerce/email_settings.py
+
 #ignore sublime project
 *.sublime-project
 *.sublime-workspace

@@ -30,11 +30,15 @@ ALLOWED_HOSTS = []
 
 DEFAULT_FROM_EMAIL = "Coding For Entrepreneurs <codingforentrepreneurs@gmail.com>"
 
-EMAIL_HOST = "smtp.gmail.com" #"smtp.sendgrid.net"
-EMAIL_HOST_USER = "codingforentrepreneurs@gmail.com"
-EMAIL_HOST_PASSWORD = "password"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+try:
+    from .email_settings import host, user, password
+    EMAIL_HOST = host #"smtp.gmail.com" #"smtp.sendgrid.net"
+    EMAIL_HOST_USER = user #"codingforentrepreneurs@gmail.com"
+    EMAIL_HOST_PASSWORD = password #"password"
+    EMAIL_PORT = 587
+    EMAIL_USE_TLS = True
+except:
+    pass
 
 
 # Application definition

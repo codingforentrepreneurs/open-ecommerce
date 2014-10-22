@@ -27,6 +27,9 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
+DEFAULT_FROM_EMAIL = "someemail@gmail.com"
+
 # Application definition
 
 INSTALLED_APPS = (

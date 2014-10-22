@@ -90,6 +90,7 @@ Each Lecture Name is linked to the related source code.
 
 [Unique Email & Post Save Signal](../../tree/2caa0ad81a5089cbd22af9a612f9fd0349eb80c1)
 
+[Email Confirmed & Activation Method](../../tree/b5da41f513b3cfc72080023b41345f664d661833)
 
 
 ## Installation & Troubleshooting Guides

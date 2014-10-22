@@ -94,6 +94,8 @@ Each Lecture Name is linked to the related source code.
 
 [Setup Email Ability](../../tree/35855c4bc69e6e25092645037d64bb167250936f)
 
+[Activation Hash & View](../../tree/9e1c40b563b341010ceb86a5230da74047c29661)
+
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)
 

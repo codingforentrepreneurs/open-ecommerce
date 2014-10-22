@@ -96,6 +96,9 @@ Each Lecture Name is linked to the related source code.
 
 [Activation Hash & View](../../tree/9e1c40b563b341010ceb86a5230da74047c29661)
 
+[Redirects](../../tree/36bdcf58cafe3a190d6897b19bf3ab7c620ef20e)
+
+
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)
 

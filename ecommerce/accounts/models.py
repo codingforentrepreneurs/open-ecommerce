@@ -28,9 +28,9 @@ class EmailConfirmed(models.Model):
 	def __unicode__(self):
 		return str(self.confirmed)
 
-	def active_user_email(self):
+	def activate_user_email(self):
 		#send email here & render a string
-		activation_url = "http://localhost:8000/acccounts/activate/%s" %(self.activation_key)
+		activation_url = "http://localhost:8000/accounts/activate/%s" %(self.activation_key)
 		context = {
 			"activation_key": self.activation_key,
 			"activation_url": activation_url,
@@ -38,11 +38,10 @@ class EmailConfirmed(models.Model):
 		}
 		message = render_to_string("accounts/activation_message.txt", context)
 		subject = "Activate your Email"
-		print message
-		#self.email_user(subject, message, settings.DEFAULT_FROM_EMAIL)
+		self.email_user(subject, message, settings.DEFAULT_FROM_EMAIL)
 
 	def email_user(self, subject, message, from_email=None, *kwargs):
-		send_mail(subject, message, from_email, [self.user.email], **kwargs)
+		send_mail(subject, message, from_email, [self.user.email], kwargs)
 
 
 

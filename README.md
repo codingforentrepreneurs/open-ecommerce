@@ -100,6 +100,8 @@ Each Lecture Name is linked to the related source code.
 
 [Bootstrap Alert Messages](../../tree/14842653ca5b01e437f85ac2ff215e1d3a95837a)
 
+[Django Messages](../../tree/516340117137a76e2c790cc358cbd1cda9fd4e01)
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

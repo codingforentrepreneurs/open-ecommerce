@@ -98,6 +98,8 @@ Each Lecture Name is linked to the related source code.
 
 [Redirects](../../tree/36bdcf58cafe3a190d6897b19bf3ab7c620ef20e)
 
+[Bootstrap Alert Messages](../../tree/14842653ca5b01e437f85ac2ff215e1d3a95837a)
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

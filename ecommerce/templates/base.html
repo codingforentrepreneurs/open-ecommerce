@@ -24,6 +24,15 @@
     <!-- Custom styles for this template -->
     <link href="http://getbootstrap.com/examples/navbar-static-top/navbar-static-top.css" rel="stylesheet">
     <style>
+    .alert-top-message {
+        margin-bottom: 0px;
+        border-radius: 0px;
+        text-align: center;
+        background-color: #DBDBDB;
+    }
+    .alert-top-message h3{
+        margin: 0 auto;
+    }
     {% block styles %}
     {% endblock %}
 
@@ -54,13 +63,22 @@
   </head>
 
   <body>
-
+  <div class='alert alert-top-message alert-dismissible' role='alert'>
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <div class="container">
+        <h3>Hello there</h3>
+      </div>
+  </div>
   {% include 'navbar.html' %}
 
     {% block jumbotron %}
     {% endblock %}
 
     <div class="container">
+    <div class='alert alert-success alert-dismissible' role='alert'>
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <p>Hello there</p>
+  </div>
 
     {% block content %}
 

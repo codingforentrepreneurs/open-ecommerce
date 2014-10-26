@@ -10,10 +10,13 @@ from .forms import LoginForm, RegistrationForm
 from .models import EmailConfirmed
 # Create your views here.
 
+
 def logout_view(request):
 	print "logging out"
 	logout(request)
-	messages.success(request, "Successfully Logged out. Feel free to login again.")
+	messages.success(request, "<strong>Successfully Logged out</strong>. Feel free to <a href='%s'>login</a> again." %(reverse("auth_login")), extra_tags='safe, abc')
+	messages.warning(request, "There's a warning.")
+	messages.error(request, "There's an error.")
 	return HttpResponseRedirect('%s'%(reverse("auth_login")))
 
 def login_view(request):

@@ -102,6 +102,8 @@ Each Lecture Name is linked to the related source code.
 
 [Django Messages](../../tree/516340117137a76e2c790cc358cbd1cda9fd4e01)
 
+[Marketing App](../../tree/67a303e0408d3f9ded3c555e77f1a16ac57ef2a0)
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

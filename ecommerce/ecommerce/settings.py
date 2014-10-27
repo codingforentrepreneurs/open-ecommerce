@@ -53,11 +53,11 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'south',
-    'products',
-    'carts',
-    'orders',
     'accounts',
+    'carts',
     'marketing',
+    'orders',
+    'products',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -67,6 +67,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'marketing.middleware.DisplayMarketing',
+    #
 )
 
 ROOT_URLCONF = 'ecommerce.urls'

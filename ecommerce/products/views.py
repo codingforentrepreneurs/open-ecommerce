@@ -24,10 +24,8 @@ def search(request):
 
 def home(request):
 	products = Product.objects.all()
-	marketing_message = MarketingMessage.objects.all()[0]
 	template = 'products/home.html'	
-	context = {"products": products,
-			"marketing_message": marketing_message}
+	context = {"products": products}
 	return render(request, template, context)
 
 

@@ -106,6 +106,11 @@ Each Lecture Name is linked to the related source code.
 
 [Middleware for Marketing Message](../../tree/471163df2dc9d610fa9a50474e906f76ba3a36cb)
 
+[Custom Model Queryset and Model Managers](../../tree/38e1bd4d36eea3ba6ad39da766d6fc9df6c896aa)
+
+
+
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

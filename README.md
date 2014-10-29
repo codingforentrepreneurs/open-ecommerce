@@ -104,6 +104,8 @@ Each Lecture Name is linked to the related source code.
 
 [Marketing App](../../tree/67a303e0408d3f9ded3c555e77f1a16ac57ef2a0)
 
+[Middleware for Marketing Message](../../tree/471163df2dc9d610fa9a50474e906f76ba3a36cb)
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

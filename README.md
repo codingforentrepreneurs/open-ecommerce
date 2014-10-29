@@ -108,7 +108,7 @@ Each Lecture Name is linked to the related source code.
 
 [Custom Model Queryset and Model Managers](../../tree/38e1bd4d36eea3ba6ad39da766d6fc9df6c896aa)
 
-
+[Message Display Duration](../../tree/6fb9cb371993c3e67369bd81ab0d7bbc507aa9bb)
 
 
 

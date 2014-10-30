@@ -66,7 +66,7 @@
   <body>
   {% if request.session.marketing_message %}
   <div class='alert alert-top-message alert-dismissible' role='alert'>
-    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <button id='marketing-message-btn' type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
       <div class="container">
         <h3>{{ request.session.marketing_message|safe }}</h3>
       </div>
@@ -102,7 +102,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  
+  <script>
+      $(document).ready(function(){
+        $("#marketing-message-btn").click(function(){
+         $.ajax({
+              type: "POST",
+              url: "{% url 'dismiss_marketing_message' %}",
+              data: {
+                "dimiss-marketing": true,
+                "csrfmiddlewaretoken": "{{ csrf_token }}",
+              },
+              success: function(data){
+              },
+              error: function(){
+                alert("Error! Something wrong. Please try again later")
+              },
+           });
+        });
+    });
+
+
+  </script>
+
+
 	<script>
 	$(document).ready(function(){
 		{% block jquery %}{% endblock%}

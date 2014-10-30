@@ -15,6 +15,7 @@ urlpatterns = patterns('',
     url(r'^cart/$', 'carts.views.view', name='cart'),
     url(r'^checkout/$', 'orders.views.checkout', name='checkout'),
     url(r'^orders/$', 'orders.views.orders', name='user_orders'),
+    url(r'^ajax/dismiss_marketing_message/$', 'marketing.views.dismiss_marketing_message', name='dismiss_marketing_message'),
     # url(r'^blog/', include('blog.urls')),
     #(?P<all_items>.*)
     #(?P<id>\d+)

@@ -1,6 +1,7 @@
-import datetime
+#import datetime
 
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -10,8 +11,8 @@ class MarketingQueryset(models.query.QuerySet):
 
 	def featured(self):
 		return self.filter(featured=True)\
-			.filter(start_date__lt=datetime.datetime.now())\
-			.filter(end_date__gte=datetime.datetime.now())
+			.filter(start_date__lt=timezone.now())\
+			.filter(end_date__gte=timezone.now())
 
 
 class MarketingManager(models.Manager):

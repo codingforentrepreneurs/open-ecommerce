@@ -99,6 +99,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+MARKETING_HOURS_OFFSET = 3
+MARKETING_SECONDS_OFFSET = 0
+
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.debug",

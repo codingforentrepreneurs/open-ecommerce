@@ -110,6 +110,7 @@ Each Lecture Name is linked to the related source code.
 
 [Message Display Duration](../../tree/6fb9cb371993c3e67369bd81ab0d7bbc507aa9bb)
 
+[Ajax & Timezone](../../tree/c7c6dfbd639db6c89b18d350525a5e395fa02237)
 
 
 ## Installation & Troubleshooting Guides

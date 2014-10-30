@@ -112,6 +112,7 @@ Each Lecture Name is linked to the related source code.
 
 [Ajax & Timezone](../../tree/c7c6dfbd639db6c89b18d350525a5e395fa02237)
 
+[Boostrap Carousel](../../tree/e0283864dfc082b732e37252b295262ca26449a8)
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

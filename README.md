@@ -118,6 +118,8 @@ Each Lecture Name is linked to the related source code.
 
 [Featured Sliders & Slider Links](../../tree/aa936255ced66c4f2bd2521e7854c3efca578169)
 
+[Bootstrap Modal](../../tree/d67ab1dc0f9c0d895da188e5df35a3358db2fc25)
+
 
 
 ## Installation & Troubleshooting Guides

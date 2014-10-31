@@ -114,6 +114,12 @@ Each Lecture Name is linked to the related source code.
 
 [Boostrap Carousel](../../tree/e0283864dfc082b732e37252b295262ca26449a8)
 
+[Marketing Slider](../../tree/92fb7f14eb42f5e3564ba7932f9bb1a5182601ac)
+
+[Featured Sliders & Slider Links](../../tree/aa936255ced66c4f2bd2521e7854c3efca578169)
+
+
+
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)
 

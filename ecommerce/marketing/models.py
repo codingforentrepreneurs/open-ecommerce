@@ -23,7 +23,7 @@ class MarketingManager(models.Manager):
 	def all(self):
 		return self.get_queryset().active()
 
-	def featured(self):
+	def all_featured(self):
 		return self.get_queryset().active().featured()
 
 	def get_featured_item(self):
@@ -58,6 +58,7 @@ class Slider(models.Model):
 	image = models.ImageField(upload_to=slider_upload)
 	#image = models.FileField(upload_to=slider_upload)
 	order = models.IntegerField(default=0)
+	url_link = models.CharField(max_length=250, null=True, blank=True)
 	header_text = models.CharField(max_length=120, null=True, blank=True)
 	text = models.CharField(max_length=120, null=True, blank=True)
 	active = models.BooleanField(default=False)

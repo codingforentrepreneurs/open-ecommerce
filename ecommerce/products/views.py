@@ -24,12 +24,12 @@ def search(request):
 
 
 def home(request):
-	sliders = Slider.objects.all()
+	sliders = Slider.objects.all_featured()
 	products = Product.objects.all()
 	template = 'products/home.html'	
 	context = {
 		"products": products,
-		"sliders": sliders,
+		"sliders": sliders
 		}
 	return render(request, template, context)
 

@@ -122,6 +122,8 @@ Each Lecture Name is linked to the related source code.
 
 [Add Form to Modal](../../tree/bacb0d98d567dbddcd2cc68aba9bf756fa74d1fe)
 
+[Ajax Email Sign Up](../../tree/f71fbed116cc14dfbbd83d4cac224a078d66f9c6)
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

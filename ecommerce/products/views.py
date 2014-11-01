@@ -1,6 +1,8 @@
 from django.shortcuts import render, Http404
 
 # Create your views here.
+
+from marketing.forms import EmailForm
 from marketing.models import MarketingMessage, Slider
 
 
@@ -29,7 +31,7 @@ def home(request):
 	template = 'products/home.html'	
 	context = {
 		"products": products,
-		"sliders": sliders
+		"sliders": sliders,
 		}
 	return render(request, template, context)
 

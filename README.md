@@ -120,6 +120,7 @@ Each Lecture Name is linked to the related source code.
 
 [Bootstrap Modal](../../tree/d67ab1dc0f9c0d895da188e5df35a3358db2fc25)
 
+[Add Form to Modal](../../tree/bacb0d98d567dbddcd2cc68aba9bf756fa74d1fe)
 
 
 ## Installation & Troubleshooting Guides

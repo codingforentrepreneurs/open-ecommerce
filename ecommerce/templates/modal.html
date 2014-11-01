@@ -1,5 +1,5 @@
 <div class="modal fade" id='marketingModal'>
-<form method='POST' action='{% url "ajax_email_signup" %}'>{% csrf_token %}
+<form method='POST' action='{% url "ajax_email_signup" %}' id='sendForm'>{% csrf_token %} 
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -8,14 +8,14 @@
       </div>
       <div class="modal-body">
         <!-- <input class='form-control' type='text' placeholder='Enter Email' /> -->
-        
+        <p id='modalMessage'></p>
         <input id="id_email" class='form-control' maxlength="200" name="email" type="email" placeholder="Your Email">
         
         
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <input type='submit' class='btn btn-success' />
+        <input type='submit' class='btn btn-success' id='sendMarketingForm'/>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

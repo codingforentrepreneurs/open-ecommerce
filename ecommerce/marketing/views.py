@@ -6,6 +6,8 @@ from django.shortcuts import render, HttpResponse, Http404
 from django.http import HttpResponseBadRequest
 from django.utils import timezone
 
+from accounts.models import EmailMarketingSignUp
+
 from .forms import EmailForm
 # Create your views here.
 
@@ -25,14 +27,13 @@ def dismiss_marketing_message(request):
 
 def email_signup(request):
 	if request.method == "POST":
-		print request.POST
 		form = EmailForm(request.POST)
 		if form.is_valid():
 			email = form.cleaned_data['email']
+			new_signup = EmailMarketingSignUp.objects.create(email=email)
 			request.session['email_added_marketing'] = True
 			return HttpResponse('Success %s' %(email))
 		if form.errors:
-			print form.errors
 			json_data = json.dumps(form.errors)
 			return HttpResponseBadRequest(json_data, content_type='application/json')
 	else:

@@ -48,7 +48,28 @@ class EmailConfirmed(models.Model):
 
 
 
+class EmailMarketingSignUp(models.Model):
+	email = models.EmailField()
+	timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+	updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+	#confirmed = models.BooleanField(default=False)
 
+	def __unicode__(self):
+		return str(self.email)
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 
 

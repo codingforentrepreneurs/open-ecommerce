@@ -124,6 +124,7 @@ Each Lecture Name is linked to the related source code.
 
 [Ajax Email Sign Up](../../tree/f71fbed116cc14dfbbd83d4cac224a078d66f9c6)
 
+[Store Email Marketing Sign Ups](../../tree/04d6ce26264a49ea33d1eef27fff86892582c2fb)
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

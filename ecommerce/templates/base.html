@@ -131,7 +131,7 @@
            });
         });
     
-        {% if not request.user.is_autheniticated and not request.session.email_added_marketing %}
+        {% if not request.user.is_authenticated and not request.session.email_added_marketing and not "accounts" in request.get_full_path %}
         function showModal(){
           $("#marketingModal").modal("show");
           // setTimeout(showModal, 5000);

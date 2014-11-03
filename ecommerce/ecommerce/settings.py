@@ -58,6 +58,7 @@ INSTALLED_APPS = (
     'marketing',
     'orders',
     'products',
+    'localflavor',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -133,6 +134,6 @@ TEMPLATE_DIRS = (
 )
 
 
-STRIPE_SECRET_KEY = "sk_test_zhxt8fO2TOsOn3ZKgu0GO6di"
-STRIPE_PUBLISHABLE_KEY = "pk_test_9KDKmdl3ms9T6HYVjB8Ieg4U"
+STRIPE_SECRET_KEY = "sk_test_c7W8kM7acbH6Y2SIsN4PjK8L"
+STRIPE_PUBLISHABLE_KEY = "pk_test_giqz4Y9dhjdg6QtIUbuOBahj"
 

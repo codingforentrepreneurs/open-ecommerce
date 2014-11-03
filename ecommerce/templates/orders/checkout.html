@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+
+<form method="POST" action=''>{% csrf_token %}
+{{ address_form.as_p }}
+
+<input type='submit' class='btn btn-default' value='Add Address'/>
+</form>
+
+
+{% endblock %}

@@ -4,10 +4,36 @@ from django.conf import settings
 from django.core.mail import send_mail
 from django.core.urlresolvers import reverse
 from django.db import models
-
-
 from django.template.loader import render_to_string
+
+from localflavor.us.us_states import US_STATES
 # Create your models here.
+
+
+# NEW_STATE = (
+# 	('AB', "ABC STATE"),
+# 	('BC', "BC STATE"),
+# 	)
+
+NEW_STATE = US_STATES
+
+class UserAddress(models.Model):
+	user = models.ForeignKey(settings.AUTH_USER_MODEL)
+	address = models.CharField(max_length=120)
+	address2 = models.CharField(max_length=120, null=True, blank=True)
+	city = models.CharField(max_length=120)
+	state = models.CharField(max_length=120, choices=NEW_STATE, null=True, blank=True)
+	country = models.CharField(max_length=120)
+	zipcode = models.CharField(max_length=25)
+	phone =  models.CharField(max_length=120)
+	shipping = models.BooleanField(default=True)
+	billing = models.BooleanField(default=False)
+	timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
+	updated = models.DateTimeField(auto_now_add=False, auto_now=True)
+
+	def __unicode__(self):
+		return str(self.user.username)
+
 
 
 

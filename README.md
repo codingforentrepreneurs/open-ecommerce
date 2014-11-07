@@ -128,6 +128,9 @@ Each Lecture Name is linked to the related source code.
 
 [Checkout: Address Model](../../tree/74941650062c85b427ac6778af92d3fa0e9b0bc6)
 
+[Checkout: Address View](../../tree/56121862b7a97aee99627de986d84c75f03d85bf)
+
+
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)
 

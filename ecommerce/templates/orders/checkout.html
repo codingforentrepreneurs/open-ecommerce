@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<form method="POST" action=''>{% csrf_token %}
+<form method="POST" action='{% url "ajax_add_user_address" %}?next=checkout'>{% csrf_token %}
 {{ address_form.as_p }}
 
 <input type='submit' class='btn btn-default' value='Add Address'/>

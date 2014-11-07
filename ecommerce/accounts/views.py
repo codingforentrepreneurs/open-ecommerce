@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.core.urlresolvers import reverse
 
 
-from .forms import LoginForm, RegistrationForm
+from .forms import LoginForm, RegistrationForm, UserAddressForm
 from .models import EmailConfirmed
 # Create your views here.
 
@@ -88,8 +88,22 @@ def activation_view(request, activation_key):
 
 
 
-
-
+def add_user_address(request):
+	print request.GET
+	try:
+		next_page = request.GET.get("next")
+	except:
+		next_page = None
+	if request.method == "POST":
+		form = UserAddressForm(request.POST)
+		if form.is_valid():
+			new_address = form.save(commit=False)
+			new_address.user = request.user
+			new_address.save()
+			if next_page is not None:
+				return HttpResponseRedirect(reverse(str(next_page))+"?address_added=True")
+	else:
+		raise Http404
 
 
 

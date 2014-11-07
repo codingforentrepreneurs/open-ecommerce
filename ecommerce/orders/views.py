@@ -42,11 +42,17 @@ def checkout(request):
 		# work on some error message
 		return HttpResponseRedirect(reverse("cart"))
 
-	address_form = UserAddressForm(request.POST or None)
-	if address_form.is_valid():
-		new_address = address_form.save(commit=False)
-		new_address.user = request.user
-		new_address.save()
+	try:
+		address_added = request.GET.get("address_added")
+		print address_added
+	except:
+		address_added = None
+
+	if address_added is None:
+		address_form = UserAddressForm()
+	else:
+		address_form = None
+
 	##1 add shipping address
 	##2 add billing address
 	#3 add and run credit card 

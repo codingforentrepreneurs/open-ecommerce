@@ -126,6 +126,8 @@ Each Lecture Name is linked to the related source code.
 
 [Store Email Marketing Sign Ups](../../tree/04d6ce26264a49ea33d1eef27fff86892582c2fb)
 
+[Checkout: Address Model](../../tree/74941650062c85b427ac6778af92d3fa0e9b0bc6)
+
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)
 

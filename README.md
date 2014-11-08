@@ -134,6 +134,8 @@ Each Lecture Name is linked to the related source code.
 
 [Checkout - User Default Address](../../tree/6d749f2f373342ed3640fa8daf75c8d7efd71d67)
 
+[Stripe Payment Form](../../tree/2d1f98c211a0e960810d18a0d2f5bb2b14141bd6)
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

@@ -44,7 +44,6 @@ def checkout(request):
 
 	try:
 		address_added = request.GET.get("address_added")
-		print address_added
 	except:
 		address_added = None
 
@@ -53,6 +52,9 @@ def checkout(request):
 	else:
 		address_form = None
 
+	current_addresses = UserAddress.objects.filter(user=request.user)
+	billing_addresses = UserAddress.objects.get_billing_addresses(user=request.user)
+	print billing_addresses
 	##1 add shipping address
 	##2 add billing address
 	#3 add and run credit card 
@@ -62,7 +64,11 @@ def checkout(request):
 		del request.session['items_total']
 		return HttpResponseRedirect(reverse("cart"))
 
-	context = {"address_form": address_form}
+	context = {
+	"address_form": address_form,
+	"current_addresses": current_addresses,
+	"billing_addresses": billing_addresses,
+	}
 	template = "orders/checkout.html"
 	return render(request, template, context)
 

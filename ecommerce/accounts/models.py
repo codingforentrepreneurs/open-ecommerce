@@ -18,6 +18,18 @@ from localflavor.us.us_states import US_STATES
 
 NEW_STATE = US_STATES
 
+class UserDefaultAddress(models.Model):
+	user = models.OneToOneField(settings.AUTH_USER_MODEL)
+	shipping = models.ForeignKey("UserAddress", null=True,\
+					 blank=True, related_name="user_address_shipping_default")
+	billing = models.ForeignKey("UserAddress", null=True,\
+					blank=True, related_name="user_address_billing_default")
+
+	def __unicode__(self):
+		return str(self.user.username)
+
+
+
 class UserAddressManager(models.Manager):
 	def get_billing_addresses(self, user):
 		return super(UserAddressManager, self).filter(billing=True).filter(user=user)
@@ -43,6 +55,9 @@ class UserAddress(models.Model):
 		return "%s, %s, %s, %s, %s" %(self.address, self.city, self.state, self.country, self.zipcode)
 
 	objects = UserAddressManager()
+
+	class Meta:
+		ordering = ['-updated', '-timestamp']
 
 
 

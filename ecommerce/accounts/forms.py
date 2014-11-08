@@ -10,6 +10,7 @@ from .models import UserAddress
 
 
 class UserAddressForm(forms.ModelForm):
+	default = forms.BooleanField(label='Make Default')
 	class Meta:
 		model = UserAddress
 		fields = ["address", 
@@ -18,8 +19,7 @@ class UserAddressForm(forms.ModelForm):
 				"state", 
 				"country",
 				"zipcode", 
-				"phone",
-				"billing"]
+				"phone"]
 
 
 

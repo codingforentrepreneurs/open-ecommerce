@@ -132,6 +132,9 @@ Each Lecture Name is linked to the related source code.
 
 [Checkout: Selecting Addresses](../../tree/6fe25974125a9977ee5e37a154a9b7495f263512)
 
+[Checkout - User Default Address](../../tree/6d749f2f373342ed3640fa8daf75c8d7efd71d67)
+
+
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)
 

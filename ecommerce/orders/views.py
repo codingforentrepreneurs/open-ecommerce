@@ -1,5 +1,7 @@
 import time
 
+import stripe
+
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.conf import settings
@@ -16,9 +18,13 @@ from .utils import id_generator
 
 try:
 	stripe_pub = settings.STRIPE_PUBLISHABLE_KEY
+	stripe_secret = settings.STRIPE_SECRET_KEY
 except Exception, e:
 	print str(e)
 	raise NotImplementedError(str(e))
+
+
+stripe.api_key = stripe_secret
 
 
 def orders(request):
@@ -68,7 +74,25 @@ def checkout(request):
 	#3 add and run credit card 
 
 	if request.method == "POST":
-		print request.POST['stripeToken']
+		try:
+			user_stripe = request.user.userstripe.stripe_id
+			customer = stripe.Customer.retrieve(user_stripe)
+			#print customer
+		except:
+			customer = None
+			pass
+		if customer is not None:
+			token = request.POST['stripeToken']
+			card = customer.cards.create(card=token)
+			charge = stripe.Charge.create(
+				  amount= int(new_order.final_total * 100),
+				  currency="usd",
+				  card = card, # obtained with Stripe.js
+				  customer = customer,
+				  description="Charge for %s" %(request.user.username)
+				)
+			if charge["captured"]:
+				print "charged"
 
 	if new_order.status == "Finished":
 		#cart.delete()
@@ -77,6 +101,7 @@ def checkout(request):
 		return HttpResponseRedirect(reverse("cart"))
 
 	context = {
+	"order": new_order,
 	"address_form": address_form,
 	"current_addresses": current_addresses,
 	"billing_addresses": billing_addresses,

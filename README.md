@@ -130,6 +130,7 @@ Each Lecture Name is linked to the related source code.
 
 [Checkout: Address View](../../tree/56121862b7a97aee99627de986d84c75f03d85bf)
 
+[Checkout: Selecting Addresses](../../tree/6fe25974125a9977ee5e37a154a9b7495f263512)
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

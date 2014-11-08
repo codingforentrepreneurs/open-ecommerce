@@ -2,6 +2,7 @@ import time
 
 from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
+from django.conf import settings
 from django.shortcuts import render, HttpResponseRedirect
 
 # Create your views here.
@@ -12,6 +13,13 @@ from carts.models import Cart
 
 from .models import Order
 from .utils import id_generator
+
+try:
+	stripe_pub = settings.STRIPE_PUBLISHABLE_KEY
+except Exception, e:
+	print str(e)
+	raise NotImplementedError(str(e))
+
 
 def orders(request):
 	context = {}
@@ -58,6 +66,10 @@ def checkout(request):
 	##1 add shipping address
 	##2 add billing address
 	#3 add and run credit card 
+
+	if request.method == "POST":
+		print request.POST['stripeToken']
+
 	if new_order.status == "Finished":
 		#cart.delete()
 		del request.session['cart_id']
@@ -68,6 +80,7 @@ def checkout(request):
 	"address_form": address_form,
 	"current_addresses": current_addresses,
 	"billing_addresses": billing_addresses,
+	"stripe_pub": stripe_pub,
 	}
 	template = "orders/checkout.html"
 	return render(request, template, context)

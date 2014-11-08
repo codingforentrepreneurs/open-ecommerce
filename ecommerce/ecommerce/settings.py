@@ -134,6 +134,6 @@ TEMPLATE_DIRS = (
 )
 
 
-STRIPE_SECRET_KEY = "sk_test_c7W8kM7acbH6Y2SIsN4PjK8L"
+STRIPE_SECRET_KEY = "sk_test_tXCtSORPdz4nrozcoOsiCy2A"
 STRIPE_PUBLISHABLE_KEY = "pk_test_giqz4Y9dhjdg6QtIUbuOBahj"
 

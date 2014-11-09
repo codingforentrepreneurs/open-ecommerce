@@ -142,6 +142,8 @@ Each Lecture Name is linked to the related source code.
 
 [Minor Refactoring for User Model](../../tree/d44f85e40d371c6cf4322145a70000cf5023e603)
 
+[Calculating Accurate Order Total](../../tree/090cd17fd656ed8af0dc79a72d252a978978b263)
+
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)
 

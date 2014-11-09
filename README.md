@@ -136,7 +136,10 @@ Each Lecture Name is linked to the related source code.
 
 [Stripe Payment Form](../../tree/2d1f98c211a0e960810d18a0d2f5bb2b14141bd6)
 
-[Stripe Charge](../../tree/a9c6c0c2ba42c0b796f43955d02aec248cbaf760)
+[Stripe Charge](../../tree/ebac347724bd7a0b605d79dbcec408e588a6948d)
+
+[Order Total](../../tree/36e79134cbc674662d18cdbdbddf930bae293ddd)
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

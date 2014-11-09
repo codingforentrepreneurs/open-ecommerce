@@ -102,6 +102,7 @@ USE_TZ = True
 
 MARKETING_HOURS_OFFSET = 3
 MARKETING_SECONDS_OFFSET = 0
+DEFAULT_TAX_RATE = 0.08 # 8%
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",

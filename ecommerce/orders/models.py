@@ -1,3 +1,4 @@
+from decimal import Decimal
 from django.conf import settings
 from django.db import models
 
@@ -12,6 +13,11 @@ STATUS_CHOICES = (
 	)
 
 #python tuples
+try:
+	tax_rate = settings.DEFAULT_TAX_RATE
+except Exception, e:
+	print str(e)
+	raise NotImplementedError(str(e))
 
 class Order(models.Model):
 	user = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True)
@@ -30,7 +36,11 @@ class Order(models.Model):
 
 	def get_final_amount(self):
 		instance = Order.objects.get(id=self.id)
-		instance.tax_total = 0.08 * float(self.sub_total)
-		instance.final_total = float(self.sub_total) + float(instance.tax_total)
+		two_places = Decimal(10) ** -2
+		tax_rate_dec = Decimal("%s" %(tax_rate))
+		sub_total_dec = Decimal(self.sub_total)
+		tax_total_dec = Decimal(tax_rate_dec * sub_total_dec).quantize(two_places)
+		instance.tax_total = tax_total_dec
+		instance.final_total = sub_total_dec + tax_total_dec
 		instance.save()
 		return instance.final_total

@@ -140,6 +140,7 @@ Each Lecture Name is linked to the related source code.
 
 [Order Total](../../tree/36e79134cbc674662d18cdbdbddf930bae293ddd)
 
+[Minor Refactoring for User Model](../../tree/d44f85e40d371c6cf4322145a70000cf5023e603)
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

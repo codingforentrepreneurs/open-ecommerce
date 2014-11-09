@@ -1,10 +1,9 @@
-from django.contrib.auth import get_user_model
+from django.conf import settings
 from django.db import models
 
 # Create your models here.
 from carts.models import Cart
 
-User = get_user_model()
 
 STATUS_CHOICES = (
 		("Started", "Started"),
@@ -15,7 +14,7 @@ STATUS_CHOICES = (
 #python tuples
 
 class Order(models.Model):
-	user = models.ForeignKey(User, blank=True, null=True)
+	user = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True)
 	order_id = models.CharField(max_length=120, default='ABC', unique=True)
 	cart = models.ForeignKey(Cart)
 	status = models.CharField(max_length=120, choices=STATUS_CHOICES, default="Started")

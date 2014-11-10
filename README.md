@@ -144,6 +144,7 @@ Each Lecture Name is linked to the related source code.
 
 [Calculating Accurate Order Total](../../tree/090cd17fd656ed8af0dc79a72d252a978978b263)
 
+[Add Billing and Shipping to Stripe & Order](../../tree/358bb4f8df5f1d7bef9a02d8994dbf427bd641ac)
 
 
 ## Installation & Troubleshooting Guides

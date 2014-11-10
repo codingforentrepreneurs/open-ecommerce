@@ -49,7 +49,7 @@ class UserAddress(models.Model):
 	updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
 	def __unicode__(self):
-		return str(self.user.username)
+		return self.get_address()
 
 	def get_address(self):
 		return "%s, %s, %s, %s, %s" %(self.address, self.city, self.state, self.country, self.zipcode)

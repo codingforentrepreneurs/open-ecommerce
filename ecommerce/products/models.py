@@ -1,5 +1,6 @@
 from django.core.urlresolvers import reverse
 from django.db import models
+from django.db.models.signals import post_save
 # Create your models here.
 
 class Category(models.Model):
@@ -15,6 +16,9 @@ class Category(models.Model):
 	def __unicode__(self):
 		return self.title
 
+# T-Shirt 1
+# Active Wear 2
+# Women's Clothing 3
 
 
 class Product(models.Model):
@@ -28,6 +32,7 @@ class Product(models.Model):
 	timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
 	updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 	active = models.BooleanField(default=True)
+	update_defaults = models.BooleanField(default=False)
 
 	def __unicode__(self):
 		return self.title
@@ -90,3 +95,25 @@ class Variation(models.Model):
 
 
 
+
+def product_defaults(sender, instance, created, *args, **kwargs):
+	if instance.update_defaults:
+		categories = instance.category.all()
+		print categories
+		for cat in categories:
+			print cat.id
+			if cat.id == 1: #for t-shirts
+				small_size = Variation.objects.get_or_create(product=instance, 
+											category='size', 
+											title='Small')
+				medium_size = Variation.objects.get_or_create(product=instance, 
+											category='size', 
+											title='Medium')
+				large_size = Variation.objects.get_or_create(product=instance, 
+											category='size', 
+											title='Large')
+		instance.update_defaults = False
+		instance.save()
+	#print args, kwargs
+
+post_save.connect(product_defaults, sender=Product)

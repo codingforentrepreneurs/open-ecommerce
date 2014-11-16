@@ -151,6 +151,9 @@ Each Lecture Name is linked to the related source code.
 [Product Categories](../../tree/e7b10d38f8c546a739246aa10b71f3c421adc9f5)
 
 
+[Update Variation Defaults](../../tree/9bd8d9eff3ead23b2635f7ed033bb6a3594be22a)
+
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

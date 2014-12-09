@@ -2,6 +2,11 @@
 
 <script>
 {% block jquery %}
+
+$(".radio-label").click(function(){
+  $("label").removeClass('radio-label-selected');
+  $(this).addClass('radio-label-selected');
+});
   // This identifies your website in the createToken call below
   Stripe.setPublishableKey('{{ stripe_pub }}');
 
@@ -57,6 +62,36 @@ $("#addShippingAddress").click(function(e){
 <style>
 {% block styles %}
 
+.radio-label {
+  font-size: 22px;
+  font-weight: normal;
+  padding: 4px 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.radio-label input[type=radio] {
+  display: none;
+}
+
+.radio-label:hover {
+  font-size: 22px;
+  font-weight: normal;
+  background-color: #428bca;
+  color: white;
+  cursor: pointer;
+
+}
+
+.radio-label-selected {
+  font-size: 22px;
+  font-weight: normal;
+  background-color: #428bca;
+  color: white;
+  cursor: pointer;
+}
+
+
 @media(min-width: 1200px) {
   .total { 
     position: fixed;
@@ -75,109 +110,114 @@ $("#addShippingAddress").click(function(e){
 <a href='#'>Finalize Checkout</a>
 </div>
 </div>
-<div class='col-sm-6 pull-right' id='shippingAddressForm' style='display:none;'>
-<h3>Add new Shipping Address</h3>
-<form method="POST" action='{% url "ajax_add_user_address" %}?next=checkout'>{% csrf_token %}
-{{ address_form.as_p }}
 
-<input type='submit' class='btn btn-default' value='Add Shipping Address'/>
-</form>
-</div>
+<div class='col-sm-9 pull-left'>
 
+        <div class='col-sm-6 pull-right' id='shippingAddressForm' style='display:none;'>
+        <h3>Add new Shipping Address</h3>
+        <form method="POST" action='{% url "ajax_add_user_address" %}?next=checkout'>{% csrf_token %}
+        {{ address_form.as_p }}
 
-
-
-
-<form method='POST' action="" id="payment-form"> {% csrf_token %}
-{% if current_addresses  %}
-<div class='col-sm-6'>
-<h3>Shipping Addresses</h3>
-      {% for address in current_addresses %}
-
-      {% if request.user.userdefaultaddress.shipping.id == address.id %} 
-
-      <input type='radio' name='shipping_address' value='{{ address.id }}' checked='checked'/> {{ address.get_address }} <br/>
-      {% else %}
-      <input type='radio' name='shipping_address' value='{{ address.id }}' /> {{ address.get_address }} <br/>
-
-      {% endif %}
-
-      {% endfor %}
-
-<a href='{% url "add_user_address" %}' id='addShippingAddress'>Add New Address</a>
-</div>
-{% endif %}
-
-
-
-
-<div class='row'>
-
-{% if billing_addresses  %}
-<div class='col-sm-6'>
-<h3>Billing Addresses</h3>
-{% for address in billing_addresses %}
-
-{% if request.user.userdefaultaddress.billing.id == address.id %} 
-
-<input type='radio' name='billing_address' value='{{ address.id }}' checked='checked'/> {{ address.get_address }} <br/>
-{% else %}
-<input type='radio' name='billing_address' value='{{ address.id }}' /> {{ address.get_address }} <br/>
-
-{% endif %}
-
-{% endfor %}
-</div>
-{% endif %}
-
-
-
-</div>
-
-<div class='row'>
-<div class='col-sm-6'>
-<h3>Credit Info</h3>
-  <div id='card_errors_div' class="alert alert-danger hidden payment-errors" role="alert">
-  </div>
-
-  <div class="form-row">
-    <div class='row'>
-    <div class='col-xs-6' style='padding-right:0px;'>
-    <b>Card Number</b>
-      <input class='form-control' type="text" size="20" data-stripe="number"/>
-    </div>
-    <div class='col-xs-2'>
-     <b>CVC</b>
-      <input class='form-control' type="text" size="4" data-stripe="cvc"/>
-
-    </div>
-
-    </div>
-
-  </div>
-  <br/>
-
-  <div class="form-row">
-    <b>Expiration (MM/YYYY)</b>
-    <div class='row'>
-
-    <div class='col-xs-2' style='padding-right:0px;'>
-          <input class='form-control'  type="text" size="2" data-stripe="exp-month" placeholder='2'/>
+        <input type='submit' class='btn btn-default' value='Add Shipping Address'/>
+        </form>
         </div>
-        <div class='col-xs-3'>
-        <input  class='form-control' type="text" size="4" data-stripe="exp-year" placeholder='2017'/>
+
+
+
+
+
+        <form method='POST' action="" id="payment-form"> {% csrf_token %}
+        {% if current_addresses  %}
+        <div class='col-sm-12'>
+        <h3>Shipping Addresses</h3>
+         
+            {% for address in current_addresses %}
+            
+            {% if request.user.userdefaultaddress.shipping.id == address.id %} 
+             <label class='radio-label radio-label-selected'>
+            <input type='radio' name='shipping_address' value='{{ address.id }}' checked='checked'/> {{ address.get_address }} 
+            {% else %}
+             <label class='radio-label'>
+            <input type='radio' name='shipping_address' value='{{ address.id }}' /> {{ address.get_address }}
+
+            {% endif %}
+              </label><br/>
+            {% endfor %}
+        
+
+        <a href='{% url "add_user_address" %}' id='addShippingAddress'>Add New Address</a>
         </div>
-    </div>
-  </div>
-  <br/>
-  <br/>
-  <button class='btn btn-default btn-lg' type="submit">Submit Payment</button>
+        {% endif %}
 
 
 
 
+  
+
+        {% if billing_addresses  %}
+        <div class='col-sm-12'>
+        <h3>Billing Addresses</h3>
+
+        
+              {% for address in billing_addresses %}
+               
+              {% if request.user.userdefaultaddress.billing.id == address.id %} 
+                <label class='radio-label radio-label-selected'>
+              <input type='radio' name='billing_address' value='{{ address.id }}' checked='checked'/> {{ address.get_address }} <br/>
+              {% else %}
+              <label class='radio-label'>
+              <input type='radio' name='billing_address' value='{{ address.id }}' /> {{ address.get_address }} <br/>
+
+              {% endif %}
+                </label>
+              {% endfor %}
+            
+        </div>
+        {% endif %}
+
+        <div class='col-sm-6'>
+        <h3>Credit Info</h3>
+          <div id='card_errors_div' class="alert alert-danger hidden payment-errors" role="alert">
+          </div>
+
+          <div class="form-row">
+            <div class='row'>
+            <div class='col-xs-6' style='padding-right:0px;'>
+            <b>Card Number</b>
+              <input class='form-control' type="text" size="20" data-stripe="number"/>
+            </div>
+            <div class='col-xs-2'>
+             <b>CVC</b>
+              <input class='form-control' type="text" size="4" data-stripe="cvc"/>
+
+            </div>
+
+            </div>
+
+          </div>
+          <br/>
+
+          <div class="form-row">
+            <b>Expiration (MM/YYYY)</b>
+            <div class='row'>
+
+            <div class='col-xs-2' style='padding-right:0px;'>
+                  <input class='form-control'  type="text" size="2" data-stripe="exp-month" placeholder='2'/>
+                </div>
+                <div class='col-xs-3'>
+                <input  class='form-control' type="text" size="4" data-stripe="exp-year" placeholder='2017'/>
+                </div>
+            </div>
+          </div>
+          <br/>
+          <br/>
+          <button class='btn btn-default btn-lg' type="submit">Submit Payment</button>
+
+
+
+
+  
+        </div>
+        </form>
 </div>
-</div>
-</form>
-
 {% endblock %}

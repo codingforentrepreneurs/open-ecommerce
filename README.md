@@ -154,6 +154,9 @@ Each Lecture Name is linked to the related source code.
 
 [Convert project from Django 1.6 to 1.7](../../tree/08f96a9c4cac09d45002d609bf7124b70547d2c0)
 
+[Checkout - Improve UI part 1](../../tree/2d06bca6fb3b40672c1e6a81d3392a019c08e2d9)
+
+
 
 ## Installation & Troubleshooting Guides
 [View All](../../../Guides/)

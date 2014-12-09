@@ -1,6 +1,5 @@
-Django==1.6.5
+Django==1.7.1
 Pillow==2.5.0
-South==1.0
 certifi==14.05.14
 django-localflavor==1.0
 pytz==2014.4

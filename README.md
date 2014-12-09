@@ -156,7 +156,7 @@ Each Lecture Name is linked to the related source code.
 
 [Checkout - Improve UI part 1](../../tree/2d06bca6fb3b40672c1e6a81d3392a019c08e2d9)
 
-[Checkout - Improve UI part 2](../../tree/8d9a632094c0614783c8c0969f4a054536a383ff)
+[Checkout - Improve UI part 2](../../tree/33127f9e78a09f6e1d29a62e2682ded71fea95b1)
 
 
 
